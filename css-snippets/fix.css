@@ -9,4 +9,4 @@
 /* -                                  FIXES                                     -*/
 /* ------------------------------------------------------------------------------*/
 
-:root .tree_fea3ef:focus{ outline: none; } /* fix orange line around server column */
+:root [class^=tree_]:focus { outline: none; } /* fix orange line around server column */
