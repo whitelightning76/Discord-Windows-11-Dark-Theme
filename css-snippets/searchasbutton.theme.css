@@ -1,0 +1,36 @@
+/**
+ * @name search as button
+ * @version 1.0
+ * @author WhiteLightning
+ * @description search
+*/
+
+/* ------------------------------------------------------------------------------*/
+/* -                          Search as a button                                -*/
+/* ------------------------------------------------------------------------------*/
+
+.search_a46bef:not(.open_a46bef) > .searchBar_a46bef {
+    width: 22px;
+    background: transparent;
+}
+
+.searchBarComponent_f0963d{
+    background: transparent;
+}
+
+.search_a46bef:not(.open_a46bef) .iconLayout_effbe2 {
+    cursor: pointer;
+}
+
+.search_a46bef:not(.open_a46bef) .iconContainer_effbe2 {
+    transform: scale(1.4);
+}
+
+.search_a46bef:not(.open_a46bef) .icon_effbe2 {
+    color: var(--interactive-normal);
+}
+
+.search_a46bef:not(.open_a46bef):hover .icon_effbe2 {
+    color: var(--interactive-active);
+}
+
