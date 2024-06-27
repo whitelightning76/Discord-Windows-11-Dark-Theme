@@ -1,0 +1,12 @@
+/**
+ * @name fixes
+ * @version 1.0
+ * @author WhiteLightning
+ * @description fixes for this theme
+*/
+
+/* ------------------------------------------------------------------------------*/
+/* -                                  FIXES                                     -*/
+/* ------------------------------------------------------------------------------*/
+
+:root .tree_fea3ef:focus{ outline: none; } /* fix orange line around server column */
