@@ -1,0 +1,535 @@
+/**
+ * @name Windows 12
+ * @version 1.0
+ * @author WhiteLightning
+ * @description My version of a Windows 12 Dark theme
+*/
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css); /* icons in settings */
+@import url(https://raw.githubusercontent.com/whitelightning76/Discord-Windows-11-Dark-Theme/main/css-snippets/squircleicons.theme.css); /* Avatar and Server icon rounding */
+@import url(https://raw.githubusercontent.com/whitelightning76/Discord-Windows-11-Dark-Theme/main/css-snippets/font.theme.css);
+@import url(https://raw.githubusercontent.com/whitelightning76/Discord-Windows-11-Dark-Theme/main/css-snippets/wideoptions.theme.css); /* Wide mode for options */
+
+
+:root { ::-webkit-scrollbar-thumb { background-color: rgba(89, 89, 116, 0.3); }
+		::-webkit-scrollbar-track { background-color: rgba(89, 89, 116, 0.03); }
+		::-webkit-scrollbar-track:hover { filter: brightness(135%); }
+
+		::selection { background: rgba(89, 89, 116, 65); text-shadow: none; }
+	  }
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                            BACKGROUND IMAGE                                -*/
+/* ------------------------------------------------------------------------------*/
+
+
+.theme-dark { --wallpaper:  url(https://i.imgur.com/bfsKRoD.jpeg);	/* old one url(https://i.imgur.com/La3SG7L.jpeg); */
+			  --backdrop-filter: blur(56px) brightness(25%); }
+
+.theme-light { --wallpaper: url(https://i.imgur.com/pNaBdEQ.jpeg);
+			   --backdrop-filter: blur(56px) brightness(82%); }
+
+:root #app-mount { background-image: var(--wallpaper); }
+
+:root .layers__160d8 { overflow: hidden;
+					   z-index: 1;
+					   backdrop-filter: var(--backdrop-filter); }
+
+#app-mount div[class*="titleBar"] { height:34px;
+								    align-items: center;
+								    /* justify-content: center; */
+								    [class*=winButton] { padding: 15px!important; }
+								   }
+
+.theme-dark {
+			  --theme-accent: 76, 76, 130 !important;
+
+			  --background-primary: transparent !important;
+			  --background-secondary: transparent !important;
+			  --background-secondary-alt: transparent !important;
+			  --background-tertiary: transparent !important; 
+
+
+			  --bg-surface-overlay: transparent !important;
+
+
+			  --bg-overlay-1: transparent !important;
+			  --bg-overlay-2: transparent !important;
+			  --bg-overlay-3: transparent !important;
+			  --bg-overlay-chat: transparent !important;
+			  --bg-overlay-app-frame: transparent !important;
+			  --__header-bar-background: transparent !important;
+			  --channeltextarea-background: transparent !important;
+			  --primary-600: transparent !important;
+
+			  --brand-experiment: rgba(var(--theme-accent), 0.35) ; /* buttons options */
+			  --brand-500: rgba(var(--theme-accent), 0.35); /* checkbox right click menu */
+			  --brand-530: rgba(var(--theme-accent), 0.35); /* hover menu-item */
+			  --brand-560: rgba(var(--theme-accent), 0.55); /* hover menu-item */
+			  --brand-600: rgba(var(--theme-accent), 0.55); /* menu-item active */
+			  --brand-experiment-560: rgba(var(--theme-accent), 0.55) ; /* hover buttons options */
+			  --brand-experiment-600: rgba(var(--theme-accent), 0.35); /* active buttons options */
+
+			  --background-modifier-accent: transparent !important; /* dividers in options menu */
+			  --background-modifier-hover: rgba(var(--theme-accent), 0.25) !important; /* channels folder background */
+			  --background-modifier-active: rgba(var(--theme-accent), 0.35) !important;
+			  --background-modifier-selected: rgba(var(--theme-accent), 0.35) !important;
+			  --background-message-hover: rgba(var(--theme-accent), 0.15) !important;
+
+			  --deprecated-text-input-border-hover: rgb(179, 179, 179) !important; 
+			  --modal-footer-background: transparent !important;
+
+			  --input-background: rgba(var(--theme-accent), 0.35) !important;
+
+			  --deprecated-card-bg: rgba(var(--theme-accent), 0.25) !important; /* cards background */
+
+			  --text-normal: rgb(204, 204, 204) !important;
+			  --text-highlight: rgb(255, 255, 255) !important;
+			  --text-link: rgb(143, 143, 189) !important;
+			  --text-positive: rgb(0, 153, 0) !important;
+			  --text-warning: rgb(255,165,0) !important;
+			  --text-danger: rgb(204, 0, 0) !important;
+			  --text-muted: rgb(128, 128, 128) !important;
+
+			  --interactive-active: rgb(255, 255, 255) !important;
+			  --interactive-hover: rgb(255, 255, 255) !important;
+			  --interactive-muted: rgb(128, 128, 128) !important;
+			  --interactive-normal: rgb(204, 204, 204) !important;
+
+			  --header-primary: var(--text-highlight) !important;
+			  --header-secondary: var(--text-normal) !important;
+
+			  --background-mentioned: rgba(var(--theme-accent), 0.30) !important;
+			  --background-mentioned-hover: rgba(var(--theme-accent), 0.45) !important;
+
+			  --button-danger-background: rgb(102, 0, 0) !important;
+			  --button-danger-background-hover: rgb(128, 0, 0) !important;
+			  --button-outline-danger-border: rgb(128, 0, 0) !important;
+			  --button-outline-danger-background-hover: rgb(128, 0, 0) !important;
+			  --button-outline-danger-border-hover: rgb(179, 0, 0) !important;
+
+			  --button-secondary-background: var(--brand-experiment) !important;
+			  --button-secondary-background-active:var(--brand-experiment-560) !important;
+			  --button-secondary-background-hover:var(--brand-experiment-560) !important; 
+
+			  --button-positive-background: rgb(0, 100, 0) !important;
+			  --button-positive-background-active: rgb(0, 128, 0) !important;
+			  --button-positive-background-disabled: rgb(0, 51, 0) !important;
+			  --button-positive-background-hover: rgb(0, 128, 0) !important;
+
+			  --theme-background: #222222f8 !important;
+			  --theme-mica: 22, 22, 22 !important;
+			  --theme-menu-border: rgba(var(--theme-accent), 0.5) !important;
+			  --theme-menu-border-shadow: rgba(var(--text-highlight), 0.5) !important;
+			  --theme-border-gradient: linear-gradient(315deg, #A401FD, #01B5DF, #A401FD) !important;
+			  --theme-gradient-red: radial-gradient(circle at 50.4% 50.5%, rgb(102, 0, 0) 0%, rgb(51, 0, 0) 90%);
+			  --theme-gradient-message-line-read: linear-gradient(90deg, rgb(76, 76, 130) 0%, rgb(110, 110, 170) 30%, rgb(191, 191, 217) 60%,  rgb(110, 110, 170) 80%, rgb(76, 76, 130) 100%);
+
+			  }
+
+/* ------------------------------------------------------------------------------*/
+/* -                                   INPUT                                    -*/
+/* ------------------------------------------------------------------------------*/
+
+.channelTextArea__74017,
+.channelTextArea__74017:hover
+.channelTextArea__74017:focus-within { color: var(--text-highlight) !important;
+										background: rgba(var(--theme-accent), 0.15) !important;
+										border: 1px solid var(--background-mentioned-hover) !important; }
+
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                  messages, topic, threads, pinned and popups               -*/
+/* ------------------------------------------------------------------------------*/
+
+/* hover message */
+li[class*=messageListItem_]:hover { background: rgba(var(--theme-accent), 0.15) !important;border-radius: 10px; }
+
+/* new message bar / jump to present bar */
+[class^=newMessagesBar_],
+[class^=jumpToPresentBar_] { height: 34px;
+							 background: linear-gradient(315deg, #262640 0%, #000000 74%);
+							 border-radius: 0 0 10px 10px;
+							 box-shadow: none !important; }
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                                 DIALOGUES                                  -*/
+/* ------------------------------------------------------------------------------*/
+/*TEST*/
+div[aria-label="Inbox"] { background: green !important; border-radius: 10px !important; }
+
+div[class*=recentMentionsPopout_],
+[class^=menu],
+[class^=dialog],
+.contentWrapper__08434 { border-radius: 10px; border: 3px white solid ; }
+
+div[class^=header_] { background: linear-gradient(180deg, #262640 0%, #000000 74%); }
+
+.header_c0e32c { background: rgba(var(--theme-accent), 0.15) !important; }
+/*TEST END*/
+
+
+
+
+
+
+
+
+/* background */
+
+
+[class^=menu],
+[class^=submenu_] { background: none;
+				   background: linear-gradient(315deg, #262640 0%, #000000 74%) !important;
+				   border-radius: 10px;
+				   border: 0.2px var(--theme-menu-border) solid;
+				   box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow); }
+
+
+div[id="emoji-picker-tab-panel"],
+div[class*=contentWrapper_],
+div[role="dialog"],
+div[aria-label="Inbox"], /* inbox */
+div[class*=recentMentionsPopout_],
+div[class^=messagesPopoutWrap_] { background: rgba(var(--theme-accent), 0.05) !important; /* Threads */
+								  border-radius: 10px;
+								  border: 0.2px var(--theme-menu-border) solid ;
+								  box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+								  overflow: hidden; /* the blur */
+								  z-index: 1;
+								  backdrop-filter: blur(56px) brightness(85%);
+								  } 
+
+button[aria-selected="true"]{ background: rgba(var(--theme-accent), 0.25) !important; }
+
+div[class^=channelHeader_],
+div[class^=header_b3f026] { background: linear-gradient(180deg, #262640 0%, #000000 74%); /* headers */
+					 border-radius: 10px 10px 0px 0px !important; } 
+
+
+div[class^=header_faa96b] { background: rgba(var(--theme-accent), 0.10) !important;
+							overflow: hidden; /* the blur */
+							z-index: 1;
+							backdrop-filter: blur(56px) brightness(85%);} 
+
+
+
+
+.inner_a45028 { border: 1.5px var(--theme-menu-border) solid; } /* search threads */
+
+div[class^="messages_"], /* content, actual threads */
+div[data-list-item-id^="pins_"],
+.container__6764b { background: rgba(var(--theme-accent), 0.10) !important;} 
+
+div[class=footer__45690] { background: rgba(var(--theme-accent), 0.15) !important;
+						   backdrop-filter: blur(56px) brightness(65%); } /* footer pinned messages */
+
+
+
+
+/* channel logo */
+div[class^=animatedContainer_] { border-radius: 10px !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* volume bar user */
+.theme-dark .bar_a562c8,
+.theme-dark .markDash_a562c8 { background: var(--button-positive-background) !important; }
+
+
+
+
+
+/* Reaction */
+.wrapper_c0e32c { background: rgba(var(--theme-mica), 0.85) !important; }
+
+.wrapper_c0e32c { border: 0.2px var(--theme-menu-border) solid  !important;
+						  box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow) !important;
+						  border-radius: 10px !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Search */
+.container__9293f { padding: 0px !important; line-height: 16px !important; background-color: transparent !important; }
+
+.search__49676 { background-color: transparent !important;
+				 border: 1px solid var(--background-mentioned) !important;
+				 border-image: none !important; }
+
+
+.search__49676:hover { background-color: var(--background-message-default) !important;
+					   border-color: var(--background-mentioned-hover) !important; }
+
+.search__49676:focus-within { background-color: var(--background-message-hover) !important;
+							  border-color: var(--background-mentioned-hover) !important; }
+
+ul.resultsGroup__56fec { background: rgba(var(--theme-mica), 0.80) !important;
+						 border: 0.2px solid #1a1a1af8 !important;
+						 box-shadow: 0px 0px 1px 0.1px #1a1a1aff !important;
+						 border-radius: 10px !important; }
+
+/* Add friend */
+div[class^=addFriendInputWrapper_]  { color: var(--text-highlight) !important;
+									  background: rgba(var(--theme-accent), 0.15) !important;
+									  border: 1px solid var(--background-mentioned-hover) !important; }
+
+
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                          Search as a button                                -*/
+/* ------------------------------------------------------------------------------*/
+
+.search__97492:not(.open__97492) > .searchBar__97492 {
+    width: 22px;
+    background: transparent;
+}
+
+.searchBarComponent__35e86{
+    background: transparent;
+}
+
+.search__97492:not(.open__97492) .iconLayout_fea832 {
+    cursor: pointer;
+}
+
+.search__97492:not(.open__97492) .iconContainer_fea832 {
+    transform: scale(1.4);
+}
+
+.search__97492:not(.open__97492) .icon_fea832 {
+    color: var(--interactive-normal);
+}
+
+.search__97492:not(.open__97492):hover .icon_fea832 {
+    color: var(--interactive-active);
+}
+
+
+
+/* SERVERS */
+div[class^=folderIconWrapper_] { background-color: rgba(var(--theme-accent), 0.35) !important; }
+div[class^=circleIconButton_] { background-color: rgba(var(--theme-accent), 0.25) !important; }
+
+
+
+div[class^=circleIconButton_]:hover,
+div[class^=folderIconWrapper_]:hover { background-color: rgba(var(--theme-accent), 0.55) !important; }
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                                  CARDS                                     -*/
+/* ------------------------------------------------------------------------------*/
+
+div[class*=currentSession_],
+div[class^="connection_"],
+div[class^="vc-addon-card"] { background: rgba(var(--theme-accent), 0.15) !important;
+							  border-radius: 10px;
+							  border: 0.2px var(--theme-menu-border) solid ;
+							  box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+							  overflow: hidden; /* the blur */
+							  z-index: 1;
+							  backdrop-filter: blur(56px) brightness(85%);} 
+
+div[class^="connection_"]:hover { border: 0.5px white solid ; }
+
+div[class^=itemCard_] { background: var(--background-message-hover); /* user playing */
+				   border-radius: 10px;
+				   border: 0.2px var(--theme-menu-border) solid ;
+				   box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow); }
+
+div[class^=section_] { background: var(--background-message-hover); /* content user playing */
+				   border-radius: 10px;
+				   border: 0.2px var(--theme-menu-border) solid ;
+				   box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow); }
+
+div[class^=headerIcon_] { width: 32px; /*icon size */
+						  height: 32px; }
+
+
+
+div[class^=card_] { background: rgba(var(--theme-accent), 0.15) !important; /* cards communities */
+					border-radius: 10px;
+					border: 0.2px var(--theme-menu-border) solid ;
+					box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+					overflow: hidden; /* the blur */
+					z-index: 1;
+					backdrop-filter: blur(56px) brightness(85%);} 
+
+div[class^=card_]:hover { border: 0.5px white solid ; }
+
+
+
+
+
+div[class^="directoryContainer_"] { overflow: hidden; /* the blur */
+									z-index: 1;
+									backdrop-filter: blur(56px) brightness(35%);
+									margin: 10px !important; }
+
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                          DISCORD APP DIRECTORY                             -*/
+/* ------------------------------------------------------------------------------*/
+
+.image_d9c848 { border-radius: 0px;}
+
+div[class^=textContainer_] { background: rgba(var(--theme-accent), 0.15) !important; 
+					border-radius: 10px;
+					border: 0.2px var(--theme-menu-border) solid ;
+					box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+					overflow: hidden; /* the blur */
+					z-index: 1;
+					backdrop-filter: blur(56px) brightness(85%);} 
+
+[data-list-item-id^="application-directory-search_"]  { background: rgba(var(--theme-accent), 0.15) !important; 
+					border-radius: 10px;
+					border: 0.2px var(--theme-menu-border) solid ;
+					box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+					overflow: hidden; /* the blur */
+					z-index: 1;
+					backdrop-filter: blur(56px) brightness(85%);
+					margin: 10px !important;					} 
+
+div[class^=category_] { background: rgba(var(--theme-accent), 0.15) !important; 
+					border-radius: 10px;
+					border: 0.2px var(--theme-menu-border) solid ;
+					box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+					overflow: hidden;
+					z-index: 1;
+					backdrop-filter: blur(56px) brightness(85%);}
+					
+div[class^=category_]:hover { border: 0.5px white solid ; }
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+/* ------------------------------------------------------------------------------*/
+/* -                                 BUTTONS                                    -*/
+/* ------------------------------------------------------------------------------*/
+
+button[type="button"] { border-radius: 10px; /* rounding every button */}
+
+button[type="submit"]:hover { border: 0.2px var(--theme-menu-border) solid ;
+							  box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+							  overflow: hidden;
+							  z-index: 1;
+							  backdrop-filter: blur(56px) brightness(85%) ;}
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                                  FIXES                                     -*/
+/* ------------------------------------------------------------------------------*/
+
+:root .tree_ef3116:focus{ outline: none; } /* fix orange line around server column */
+
+:root .channelTextArea__74017 { padding-top: 12px; padding-bottom: 12px; } /* fix for chatinput overlap chatbox and content */
+
+div[class^="upsellTooltipWrapper_"] { background: rgba(var(--theme-accent), 0.25) !important; 
+									  border-radius: 10px;
+									  border: 0.2px var(--theme-menu-border) solid ;
+									  box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+									  overflow: hidden; /* the blur */
+									  z-index: 1;
+									  backdrop-filter: blur(56px) brightness(85%); }
+
+/* Remove buttons from chatbar */
+button[aria-label="Send a gift"] { Display: none!important; }
+
+button[aria-label="Apps"] { Display: none!important; }
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------*/
+/* -                                VESCORD                                     -*/
+/* ------------------------------------------------------------------------------*/
+
+/* Notifications */
+div[class="vc-notification"]  { background: rgba(var(--theme-accent), 0.15) !important; 
+					border-radius: 10px;
+					border: 0.2px var(--theme-menu-border) solid ;
+					box-shadow: 0px 0px 1px 0.1px var(--theme-menu-border-shadow);
+					overflow: hidden; /* the blur */
+					z-index: 1;
+					backdrop-filter: blur(56px) brightness(85%);
+					margin: 10px !important; }
+
+
+
+
+
+
